@@ -1,8 +1,7 @@
-from principal.views import home, sobre, contato
+from django.urls import path, include
+from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
-    path('sobre/', sobre),
-    path('contato/', contato),
+    path('', include('receitas.urls'))
 ]
